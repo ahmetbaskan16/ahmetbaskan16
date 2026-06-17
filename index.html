@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ezan Vakitleri</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="hero">
+        <p class="eyebrow">Türkiye geneli hızlı arama</p>
+        <h1>Ezan Vakitleri</h1>
+        <p class="subtitle">
+          Şehir ve ilçe bilgisi girerek bugünün namaz vakitlerine anında ulaşın.
+        </p>
+      </header>
+
+      <section class="card">
+        <form id="prayer-form" class="form">
+          <label class="field">
+            <span>Şehir</span>
+            <input
+              type="text"
+              name="city"
+              placeholder="Örn: İstanbul"
+              autocomplete="address-level1"
+              required
+            />
+          </label>
+          <label class="field">
+            <span>İlçe</span>
+            <input
+              type="text"
+              name="district"
+              placeholder="Örn: Kadıköy"
+              autocomplete="address-level2"
+              required
+            />
+          </label>
+          <button class="primary" type="submit">Vakitleri Getir</button>
+        </form>
+        <p class="helper">
+          Veriler Aladhan API üzerinden çekilir. İlçe bilgisi "state" olarak
+          iletilir.
+        </p>
+      </section>
+
+      <section class="card results">
+        <div class="status" id="status">Şehir ve ilçe bilgisi giriniz.</div>
+        <div class="grid" id="results" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <footer class="footer">&copy; 2024 Ezan Vakitleri</footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
