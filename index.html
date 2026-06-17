@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Username Checker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="checker-card" aria-live="polite">
+        <h1>Username Checker</h1>
+        <label for="username-input" class="input-label">Enter username</label>
+        <input
+          id="username-input"
+          type="text"
+          autocomplete="off"
+          spellcheck="false"
+          placeholder="octocat"
+          aria-label="Enter username"
+        />
+
+        <div id="result-card" class="result-card state-idle" role="status">
+          <p id="status-message">Type a username…</p>
+          <a
+            id="profile-link"
+            class="profile-link"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            hidden
+          ></a>
+        </div>
+      <p class="usage-note">
+        Usage note: Type a valid GitHub username and wait briefly; the result updates automatically.
+      </p>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
